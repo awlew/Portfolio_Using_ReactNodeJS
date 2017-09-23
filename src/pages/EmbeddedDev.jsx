@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class ContactInfo extends Component {
+class EmbeddedEngineer extends Component {
   render(props) {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Contact Information</h2>
+          <h2>Embedded Engineer</h2>
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
@@ -16,4 +16,4 @@ class ContactInfo extends Component {
   }
 }
 
-export default ContactInfo;
+export default EmbeddedEngineer;

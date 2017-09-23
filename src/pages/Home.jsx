@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class HomePage extends Component {
-  render() {
+  render(props) {
     return (
       <div className="App">
         <div className="App-header">

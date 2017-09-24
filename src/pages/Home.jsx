@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { NavLink } from 'react-router-dom';
 class HomePage extends Component {
   render(props) {
     return (
@@ -10,7 +10,8 @@ class HomePage extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        Deez Nutz
+        <NavLink to="/contact">Deez Nutz</NavLink>
+
       </div>
     );
   }

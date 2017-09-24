@@ -18,3 +18,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}

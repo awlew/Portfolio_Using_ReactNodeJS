@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 class HomePage extends Component {
   render(props) {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Welcome to React</h2>
+          <h2>Adam Wayne Lew</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Working together with others to make the world a fun and enjoyable place.
         </p>
-        <NavLink to="/contact">Deez Nutz</NavLink>
 
       </div>
     );

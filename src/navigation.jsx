@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
-import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { MenuItem, Modal, Button, ButtonGroup, DropdownButton} from 'react-bootstrap';
 
 
 // Pages
@@ -17,18 +17,51 @@ import EmbeddedEngineer from './pages/EmbeddedDev';
 import WebDeveloper from './pages/WebDev';
 
 class AdamNavigation extends Component {
+  constructor() {
+    super();
+    this.state={
+      showmodal: false,
+      yoURL: '',
+    };
+  }
+
+  alertClicked(hewrl) {
+    this.setState({yoURL: hewrl, showmodal : true});
+  }
+
+  close() {
+    this.setState({showmodal: false});
+  }
+
   render () {
+    const showmodal = this.state.showmodal;
+    const yoURL = this.state.yoURL;
     return (
       <div>
-        <Nav bsStyle="tabs"  onSelect={this.handleSelect}>
-            <NavItem eventKey="1" href="/">Home</NavItem>
-            <NavDropdown eventKey="2" title="Software Engineer" id="se-dropdown">
-              <MenuItem eventKey="2.1" href="/skillEXP/SoftwareEngineer/EmbeddedDev/">Embedded Systems</MenuItem>
-              <MenuItem eventKey="2.2" href="/skillEXP/SoftwareEngineer/WebDev/">Web Development</MenuItem>
-            </NavDropdown>
-            <NavItem eventKey="3" href="/skillEXP/MiniatureModel">Miniature Modeler and Painter</NavItem>
-            <NavItem eventKey="3" href="/contact">Contact Info</NavItem>
-          </Nav>
+        <Modal show={showmodal} onHide={this.close} dialogClassName="col-centered">
+          <Modal.Header>
+            <Modal.Title>Main Menu</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+           <ButtonGroup vertical>
+              <Button href="/">Home</Button>
+              <DropdownButton title="Software Engineer">
+                <MenuItem eventKey="2.1" href="/skillEXP/SoftwareEngineer/EmbeddedDev/">Embedded Systems</MenuItem>
+                <MenuItem eventKey="2.2" href="/skillEXP/SoftwareEngineer/WebDev/">Web Development</MenuItem>
+              </DropdownButton>
+              <Button href="/skillEXP/MiniatureModel">Miniature Modeler and Painter</Button>
+              <Button href="/skillEXP/MiniatureModel">Contact Info</Button>
+            </ButtonGroup>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.close.bind(this)}>Close</Button>
+            <Button bsStyle="danger" disabled={true}>Self Destruct</Button>
+          </Modal.Footer>
+        </Modal>
+        <Button onClick={this.alertClicked.bind(this, '/')}>
+          Main Menu
+        </Button>
+
         <Router>
           <div>
             <Route exact path ="/" component={HomePage} />

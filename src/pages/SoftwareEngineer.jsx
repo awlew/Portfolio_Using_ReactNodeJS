@@ -14,25 +14,13 @@ class SoftwareEngineer extends Component {
     };
   }
 
-  alertClicked(hewrl) {
-    this.setState({yoURL: hewrl, showmodal : true});
-  }
-
-  close() {
-    this.setState({showmodal: false});
-  }
-
-  alertRender(rP){
-    this.setState({renderedPanel: rP});
-  }
-
   render() {
-    const rPages = {
-      'Summary':'summaryP',
-      'Technical Skills': 'techSk',
-      'Work Experience': 'wExp',
-      'Projects' : 'wProjects',
-    };
+    const rPages = [ { pName:'Summary', pVal:'summaryP'},
+          { pName:'Technical Skills', pVal:'techSk'},
+          { pName:'Work Experience', pVal:'wExp'},
+          { pName:'Projects', pVal:'wProjects'},
+          { pName:'Academic Courses', pVal:'ACourses'},
+    ];
     return(
       <div>
         <StatusPanel

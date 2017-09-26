@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 
+import StatusPanel from '../MacroComponent/StatusPanel.jsx';
+
 class MiniatureModel extends Component {
   render(props) {
+    const rPages = [ { pName:'Gallery', pVal:'modGal'},
+          { pName:'Summary', pVal:'modsummaryP'},
+          { pName:'Technical Skills', pVal:'modtechSk'},
+          { pName:'Commissions and Quotes', pVal:'ComQuote'}
+    ];
+
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Miniature Scale Modeler and Painter</h2>
-        </div>
-        <p className="App-intro">
-        </p>
+      <div>
+        <StatusPanel
+          navPages={rPages}
+          uName='Adam Wayne Lew'
+          uJob='Miniature Scale Modeler and Painter'
+          />
       </div>
     );
   }

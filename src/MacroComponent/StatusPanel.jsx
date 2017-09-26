@@ -6,13 +6,16 @@ import SEProjects from '../MacroComponent/SEProjects.jsx';
 import SESummary from '../MacroComponent/SESummary.jsx';
 import TechnicalSkills from '../MacroComponent/TechnicalSkills.jsx';
 import WorkExperience from '../MacroComponent/WorkExperience.jsx';
+import AcaCourses from '../MacroComponent/AcademicCourses.jsx';
+
+import ModelGallery from '../MacroComponent/ModelGallery.jsx';
 
 class StatusPanel extends Component {
   constructor() {
     super();
     this.state={
       showmodal: false,
-      renderedPanel: 'summaryP',
+      renderedPanel: '',
     };
   }
 
@@ -45,6 +48,14 @@ class StatusPanel extends Component {
       return (
         <SEProjects/>
       );
+    } else if(inPNL === 'ACourses'){
+      return (
+        <AcaCourses/>
+      );
+    } else if(inPNL === 'modGal'){
+      return (
+        <ModelGallery/>
+      );
     }
   }
 
@@ -54,14 +65,13 @@ class StatusPanel extends Component {
     const navPages = this.props.navPages;
     const showmodal = this.state.showmodal;
     const yoURL = this.state.yoURL;
-    const renderedPanel = this.state.renderedPanel;
-
+    const renderedPanel = (navPages.length === 0) ? null : ((this.state.renderedPanel === '') ? navPages[0].pVal : this.state.renderedPanel);
     const routedPanel = this.arrPNL(renderedPanel);
 
-    const renderedButtons = _.map(navPages, (key, value) => {
+    const renderedButtons = _.map(navPages, (page) => {
         return(
 
-          <Button onClick={(i) => this.alertRender(key)}>{value}</Button>
+          <Button key={page.pVal} onClick={(i) => this.alertRender(page.pVal)}>{page.pName}</Button>
         );
       }
     );

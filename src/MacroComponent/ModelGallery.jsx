@@ -4,9 +4,9 @@ import {Button} from 'react-bootstrap';
 
 
 //image paths
-import minotaur from '../thumbnails/minotaur.jpg';
+/*import minotaur from '../thumbnails/minotaur.jpg';
 import bugbears from '../thumbnails/bugbears.jpg';
-import femcommissar from '../thumbnails/femcommissar.jpg';
+import femcommissar from '../thumbnails/femcommissar.jpg';*/
 
 const MAX_IMGES = 7;
 
@@ -127,7 +127,6 @@ if (window.innerWidth >= 540){
   }
 
   render(props) {
-    alert(this.state.currentSelect);
     const renderedGallery = this.arrPNL(this.state.renderedGallery);
     const covWidth = this.calculateWidth();
     const covHeight = ((covWidth * 10) / 25);

@@ -45,12 +45,9 @@ class AdamNavigation extends Component {
           <Modal.Body>
            <ButtonGroup vertical>
               <Button href="/">Home</Button>
-              <DropdownButton title="Software Engineer">
-                <MenuItem eventKey="2.1" href="/skillEXP/SoftwareEngineer/EmbeddedDev/">Embedded Systems</MenuItem>
-                <MenuItem eventKey="2.2" href="/skillEXP/SoftwareEngineer/WebDev/">Web Development</MenuItem>
-              </DropdownButton>
+              <Button href="/skillEXP/SoftwareEngineer/">Software Engineer</Button>
               <Button href="/skillEXP/MiniatureModel">Miniature Modeler and Painter</Button>
-              <Button href="/skillEXP/MiniatureModel">Contact Info</Button>
+              <Button href="/Contact">Contact Info</Button>
             </ButtonGroup>
           </Modal.Body>
           <Modal.Footer>

@@ -5,9 +5,9 @@ import {ImageGallery} from 'react-image-gallery';
 
 
 //image paths
-import minotaur from '../thumbnails/minotaur.jpg';
+/*import minotaur from '../thumbnails/minotaur.jpg';
 import bugbears from '../thumbnails/bugbears.jpg';
-import femcommissar from '../thumbnails/femcommissar.jpg';
+import femcommissar from '../thumbnails/femcommissar.jpg';*/
 class ModelGallery extends Component {
   constructor() {
     super();
@@ -104,7 +104,7 @@ if (window.innerWidth >= 540){
           <h2>Gallery</h2>
         </div>
         <div className="App-intro">
-          
+
             <Button onClick={(i) => this.FBIn(-1)} disabled={false}>Back</Button>
           <Button onClick={(i) => this.FBIn(1)} disabled={false}>Next</Button>
           {renderedGallery}

@@ -6,7 +6,6 @@ class MiniatureModel extends Component {
   render(props) {
     const rPages = [ { pName:'Gallery', pVal:'modGal'},
           { pName:'Summary', pVal:'modsummaryP'},
-          { pName:'Technical Skills', pVal:'modtechSk'},
           { pName:'Commissions and Quotes', pVal:'ComQuote'}
     ];
 

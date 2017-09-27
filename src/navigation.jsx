@@ -38,7 +38,7 @@ class AdamNavigation extends Component {
     const yoURL = this.state.yoURL;
     return (
       <div>
-        <Modal show={showmodal} onHide={this.close} dialogClassName="col-centered">
+        <Modal show={showmodal} onHide={this.close} dialogClassName="navigation-modal">
           <Modal.Header>
             <Modal.Title>Main Menu</Modal.Title>
           </Modal.Header>

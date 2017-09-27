@@ -5,7 +5,9 @@ import {ImageGallery} from 'react-image-gallery';
 
 
 //image paths
-
+/*import minotaur from '../thumbnails/minotaur.jpg';
+import bugbears from '../thumbnails/bugbears.jpg';
+import femcommissar from '../thumbnails/femcommissar.jpg';*/
 class ModelGallery extends Component {
   constructor() {
     super();

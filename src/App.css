@@ -5,8 +5,8 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  height: 40px;
+
   color: white;
 }
 
@@ -19,7 +19,10 @@
   to { transform: rotate(360deg); }
 }
 
-.col-centered{
-    float: none;
-    margin: 0 auto;
+.navigation-modal{
+    text-align: center;
+}
+
+.table.tSkill{
+  text-align: left;
 }

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import WorkIPUC from '../MacroComponent/WIPUCpage.jsx';
+
 class HomePage extends Component {
   render(props) {
     return (
@@ -9,6 +12,8 @@ class HomePage extends Component {
         <p className="App-intro">
           Working together with others to make the world a fun and enjoyable place.
         </p>
+
+        <WorkIPUC/>
 
       </div>
     );

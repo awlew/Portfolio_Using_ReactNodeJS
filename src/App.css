@@ -10,6 +10,13 @@
   color: white;
 }
 
+.App-headerUC {
+  background-color: #ff7e00;
+  height: 40px;
+
+  color: yellow;
+}
+
 .App-intro {
   font-size: large;
 }

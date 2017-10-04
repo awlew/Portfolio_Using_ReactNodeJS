@@ -9,6 +9,7 @@ import WorkExperience from '../MacroComponent/WorkExperience.jsx';
 import AcaCourses from '../MacroComponent/AcademicCourses.jsx';
 
 import ModelGallery from '../MacroComponent/ModelGallery.jsx';
+import WorkIPUC from '../MacroComponent/WIPUCpage.jsx';
 
 class StatusPanel extends Component {
   constructor() {
@@ -34,7 +35,11 @@ class StatusPanel extends Component {
   arrPNL(inPNL){
     if(inPNL === 'summaryP'){
       return (
-        <SESummary/>
+        <div>
+          <SESummary/>
+          <WorkIPUC/>
+        </div>
+
       );
     } else if(inPNL === 'techSk'){
       return (
@@ -42,19 +47,42 @@ class StatusPanel extends Component {
       );
     } else if(inPNL === 'wExp'){
       return (
-        <WorkExperience/>
+        <div>
+          <WorkExperience/>
+          <WorkIPUC/>
+        </div>
+
       );
     } else if(inPNL === 'wProjects'){
       return (
-        <SEProjects/>
+        <div>
+          <SEProjects/>
+          <WorkIPUC/>
+        </div>
+
       );
     } else if(inPNL === 'ACourses'){
       return (
-        <AcaCourses/>
+        <div>
+          <AcaCourses/>
+          <WorkIPUC/>
+        </div>
       );
     } else if(inPNL === 'modGal'){
       return (
         <ModelGallery/>
+      );
+    } else if(inPNL === 'modsummaryP'){
+      return (
+        <div>
+          <SESummary/>
+          <WorkIPUC/>
+        </div>
+
+      );
+    } else if(inPNL === 'ComQuote'){
+      return (
+        <WorkIPUC/>
       );
     }
   }

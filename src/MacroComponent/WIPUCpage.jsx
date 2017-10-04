@@ -10,8 +10,11 @@ class WorkIPUC extends Component {
         </div>
         <p className="App-intro">
           <p>Commander we are supply capped, but are constructing additonal pylons!</p> <br/>
+          <ProgressBar>
+            <ProgressBar striped active bsStyle="success" now={33} />
+            <ProgressBar striped  bsStyle="danger" now={66} />
+          </ProgressBar>  <br/>
 
-          <ProgressBar striped active bsStyle="success" now={33} /> <br/>
           Progress can be tracked at this <a href="https://github.com/awlew/Portfolio_Using_ReactNodeJS">Github repository </a> <br/>
         <br/>
       <b>Navigate with the "Main Menu" button on the top left and enjoy the rest of the site!</b> <br/>

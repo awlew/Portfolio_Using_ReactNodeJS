@@ -49,7 +49,6 @@ class StatusPanel extends Component {
       return (
         <div>
           <WorkExperience/>
-          <WorkIPUC/>
         </div>
 
       );

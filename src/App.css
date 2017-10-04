@@ -45,3 +45,10 @@
   text-align: left;
   font-size: small;
 }
+
+.NotFoundHeader {
+  background-color: #ff0000;
+  height: 40px;
+
+  color: yellow;
+}

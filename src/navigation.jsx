@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { MenuItem, Modal, Button, ButtonGroup, DropdownButton} from 'react-bootstrap';
 
 
@@ -9,7 +9,7 @@ import HomePage from './pages/Home';
 import SoftwareEngineer from './pages/SoftwareEngineer';
 import MiniatureModel from './pages/MiniatureModel';
 import ContactInfo from './pages/ContactInfo';
-
+import NotFoundPage from './pages/NotFound';
 //test deploy
 
 //nested pages
@@ -61,12 +61,15 @@ class AdamNavigation extends Component {
 
         <Router>
           <div>
-            <Route exact path ="/" component={HomePage} />
-            <Route path ="/skillEXP/SoftwareEngineer" component={SoftwareEngineer} />
-            <Route strict path ="/skillEXP/SoftwareEngineer/EmbeddedDev/" component={EmbeddedEngineer} />
-            <Route strict path ="/skillEXP/SoftwareEngineer/WebDev/" component={WebDeveloper} />
-            <Route exact path ="/skillEXP/MiniatureModel" component={MiniatureModel} />
-            <Route exact path ="/contact" component={ContactInfo} />
+            <Switch>
+              <Route exact path ="/" component={HomePage} />
+              <Route path ="/skillEXP/SoftwareEngineer" component={SoftwareEngineer} />
+              <Route strict path ="/skillEXP/SoftwareEngineer/EmbeddedDev/" component={EmbeddedEngineer} />
+              <Route strict path ="/skillEXP/SoftwareEngineer/WebDev/" component={WebDeveloper} />
+              <Route exact path ="/skillEXP/MiniatureModel" component={MiniatureModel} />
+              <Route exact path ="/contact" component={ContactInfo} />
+              <Route component={NotFoundPage} />
+            </Switch>
           </div>
         </Router>
       </div>

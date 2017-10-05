@@ -52,3 +52,12 @@
 
   color: yellow;
 }
+
+.WIPBOLD{
+  font-size: xx-large;
+  color:blue;
+}
+
+.fnamerow, .lnamerow, .emailrow, .phonerow, .prefcon{
+  text-align: center;
+}

@@ -15,7 +15,7 @@ class SoftwareEngineer extends Component {
   }
 
   render() {
-    const rPages = [ { pName:'Summary', pVal:'summaryP'},
+    const rPages = [
           { pName:'Technical Skills', pVal:'techSk'},
           { pName:'Work Experience', pVal:'wExp'},
           { pName:'Projects', pVal:'wProjects'},

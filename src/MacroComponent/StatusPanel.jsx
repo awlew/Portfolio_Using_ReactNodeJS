@@ -33,15 +33,7 @@ class StatusPanel extends Component {
   }
 
   arrPNL(inPNL){
-    if(inPNL === 'summaryP'){
-      return (
-        <div>
-          <SESummary/>
-          <WorkIPUC/>
-        </div>
-
-      );
-    } else if(inPNL === 'techSk'){
+    if(inPNL === 'techSk'){
       return (
         <TechnicalSkills/>
       );
@@ -70,14 +62,6 @@ class StatusPanel extends Component {
     } else if(inPNL === 'modGal'){
       return (
         <ModelGallery/>
-      );
-    } else if(inPNL === 'modsummaryP'){
-      return (
-        <div>
-          <SESummary/>
-          <WorkIPUC/>
-        </div>
-
       );
     } else if(inPNL === 'ComQuote'){
       return (

@@ -5,7 +5,6 @@ import StatusPanel from '../MacroComponent/StatusPanel.jsx';
 class MiniatureModel extends Component {
   render(props) {
     const rPages = [ { pName:'Gallery', pVal:'modGal'},
-          { pName:'Summary', pVal:'modsummaryP'},
           { pName:'Commissions and Quotes', pVal:'ComQuote'}
     ];
 

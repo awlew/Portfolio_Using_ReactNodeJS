@@ -49,7 +49,7 @@ onPanelClick(e, evKey){
           <h2>Work Experience</h2>
         </div>
         <p className="App-intro">
-          World Selected: {this.state.overworldsel}
+          World Selected: <b className="worldNum">{this.state.overworldsel}</b>
           <div className="immap">
             <ImageMapper src={overworld} map={worldmap} onClick={(obj, num, event) => this.onWorldClick(obj, num, event)} />
           </div>

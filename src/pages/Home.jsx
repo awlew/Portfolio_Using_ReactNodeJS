@@ -9,10 +9,16 @@ class HomePage extends Component {
         <div className="App-header">
           <h2>Adam Wayne Lew</h2>
         </div>
-        <p className="App-intro">
-          Working together with others to make the world a fun and enjoyable place.
-        </p>
+        <div>
+            <h3>To co-create an enjoyable world through enjoyable technologies; one smile at a time.</h3>
+        </div>
 
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <WorkIPUC/>
 
       </div>

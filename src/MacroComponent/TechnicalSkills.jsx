@@ -1,6 +1,31 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
 import {Table} from 'react-bootstrap';
+
+import condresume from '../miscfiles/Adam_Lew_Resume.docx';
+import longresume from '../miscfiles/Adam_Lew_Resume_Technical.docx';
+
+
 class TechnicalSkills extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      outresume:'',
+    };
+  }
+
+  onPressButton(sender){
+    switch(sender){
+      case 1: this.setState({outresume: condresume});
+              break;
+      case 2: this.setState({outresume: longresume});
+              break;
+      default: alert("nope");
+              break;
+    };
+
+  }
+
   render(props) {
     return (
       <div className="App">
@@ -40,10 +65,25 @@ class TechnicalSkills extends Component {
                 <td>Source Control</td>
                 <td>Tortoise SVN, GitHubEnterprise, BitBucket</td>
               </tr>
+
             </tbody>
           </Table>
         </p>
+        <Table condensed hover className="tSkill">
+          <tr>
+            <td>
+              <form method="get" name="downloadform" action={this.state.outresume}>
+                <Button bsStyle="primary" bsSize="large" type="submit" onClick={(i)=>this.onPressButton(1)}>Download Resume</Button>
+                <Button bsStyle="primary" bsSize="large" type="submit" onClick={(i)=>this.onPressButton(2)}>Download Technical Resume</Button>
+              </form>
+            </td>
+            <td>
+              <form method="get" >
 
+              </form>
+            </td>
+          </tr>
+        </Table>
       </div>
     );
   }

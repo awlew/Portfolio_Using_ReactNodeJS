@@ -8,7 +8,7 @@ import {Button} from 'react-bootstrap';
 import bugbears from '../thumbnails/bugbears.jpg';
 import femcommissar from '../thumbnails/femcommissar.jpg';*/
 
-const MAX_IMGES = 7;
+const MAX_IMGES = 9;
 
 class ModelGallery extends Component {
   constructor() {
@@ -16,7 +16,7 @@ class ModelGallery extends Component {
     this.state={
       showmodal: false,
       renderedGallery: '',
-      currentSelect: 7,
+      currentSelect: 8,
     };
   }
 
@@ -26,6 +26,14 @@ class ModelGallery extends Component {
 
   arrPNL(){
     switch(this.state.currentSelect) {
+
+      case 8: //bugbears
+          return (
+            <FacebookProvider appId="1911577932496741">
+              <EmbeddedPost href="https://www.facebook.com/media/set/?set=a.1974550065894121.1073741847.100000174417748&type=1&l=800f0c46b7" width="500" />
+            </FacebookProvider>
+          );
+          break;
       case 7: //bugbears
           return (
             <FacebookProvider appId="1911577932496741">

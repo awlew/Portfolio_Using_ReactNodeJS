@@ -16,7 +16,7 @@ class ModelGallery extends Component {
     this.state={
       showmodal: false,
       renderedGallery: '',
-      currentSelect: 0,
+      currentSelect: 7,
     };
   }
 
@@ -26,7 +26,14 @@ class ModelGallery extends Component {
 
   arrPNL(){
     switch(this.state.currentSelect) {
-        case 0: //bugbears
+      case 7: //bugbears
+          return (
+            <FacebookProvider appId="1911577932496741">
+              <EmbeddedPost href="https://www.facebook.com/media/set/?set=a.1972231499459311.1073741846.100000174417748&type=1&l=1581672a8e" width="500" />
+            </FacebookProvider>
+          );
+          break;
+        case 6: //bugbears
             return (
               <FacebookProvider appId="1911577932496741">
                 <EmbeddedPost href="https://www.facebook.com/media/set/?set=a.1913853605297101.1073741841.100000174417748&type=1&l=bc802113ea" width="500" />
@@ -34,7 +41,7 @@ class ModelGallery extends Component {
             );
             break;
 
-        case 1:
+        case 5:
             return ( //female commissar
               <div>
                 <FacebookProvider appId="1911577932496741">
@@ -46,7 +53,7 @@ class ModelGallery extends Component {
               </div>
             );
             break;
-        case 2:
+        case 4:
             return ( //Warlock
               <div>
                 <FacebookProvider appId="1911577932496741">
@@ -70,21 +77,21 @@ class ModelGallery extends Component {
               </div>
             );
             break;
-      case 4: //Mangu Timur
+      case 2: //Mangu Timur
           return (
             <FacebookProvider appId="1911577932496741">
               <EmbeddedPost href="https://www.facebook.com/media/set/?set=a.1038038706211933.1073741833.100000174417748&type=1&l=ccf4adb8f5" width="500" />
             </FacebookProvider>
           );
           break;
-      case 5: //Dragon Gundam
+      case 1: //Dragon Gundam
           return (
             <FacebookProvider appId="1911577932496741">
               <EmbeddedPost href="https://www.facebook.com/media/set/?set=a.1027389583943512.1073741832.100000174417748&type=1&l=cf302045ff" width="500" />
             </FacebookProvider>
           );
           break;
-      case 6: //Dragon
+      case 0: //Dragon
           return (
             <FacebookProvider appId="1911577932496741">
               <EmbeddedPost href="https://www.facebook.com/media/set/?set=a.1006337182715419.1073741831.100000174417748&type=1&l=f1cc750942" width="500" />
@@ -137,8 +144,8 @@ if (window.innerWidth >= 540){
           <h2>Gallery</h2>
         </div>
         <div className="App-intro">
-          <Button onClick={(i) => this.FBIn('dec')}>Back</Button>
-          <Button onClick={(i) => this.FBIn('inc')}>Next</Button>
+          <Button onClick={(i) => this.FBIn('inc')}>Back</Button>
+          <Button onClick={(i) => this.FBIn('dec')}>Next</Button>
           {renderedGallery}
         </div>
       </div>

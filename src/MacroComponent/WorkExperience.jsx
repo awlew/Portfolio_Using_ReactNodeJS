@@ -8,7 +8,7 @@ class WorkExperience extends Component {
 constructor() {
   super();
   this.state={
-    overworldsel : '1-4',
+    overworldsel : '1-5',
   };
 }
 
@@ -30,16 +30,19 @@ onPanelClick(e, evKey){
         { shape: "circle", coords: [477,319,24] },
         { shape: "circle", coords: [169,259,27] },
         { shape: "circle", coords: [458,123,30] },
+        { shape: "circle", coords: [155,92,30] },
       ]
     };
     const world11 = (this.state.overworldsel === '1-1') ? true : false;
     const world12 = (this.state.overworldsel === '1-2') ? true : false;
     const world13 = (this.state.overworldsel === '1-3') ? true : false;
     const world14 = (this.state.overworldsel === '1-4') ? true : false;
+    const world15 = (this.state.overworldsel === '1-5') ? true : false;
     const worldsty11 = (this.state.overworldsel === '1-1') ? 'success' : 'info';
     const worldsty12 = (this.state.overworldsel === '1-2') ? 'success' : 'info';
     const worldsty13 = (this.state.overworldsel === '1-3') ? 'success' : 'info';
     const worldsty14 = (this.state.overworldsel === '1-4') ? 'success' : 'info';
+    const worldsty15 = (this.state.overworldsel === '1-5') ? 'success' : 'info';
 
 
     return (
@@ -53,6 +56,26 @@ onPanelClick(e, evKey){
           <div className="immap">
             <ImageMapper src={overworld} map={worldmap} onClick={(obj, num, event) => this.onWorldClick(obj, num, event)} />
           </div>
+          <Panel collapsible expanded={world15} bsStyle={worldsty15} header="World 1-5 (December 2017 - Present) : Raytheon Space and Airborne Systems - Software Engineer"  eventKey="5" onSelect={()=>this.setState({overworldsel: "1-5"})}>
+            <div className="worldpanel">
+              Raytheon Space and Airborne Systems is a major component of Raytheon that focuses on developing airborne radars and processors, Electro-optic/infrared sensors, Electronic warfare and precision guidance systems, Active electronically scanned array radars, Space and missile defense technology, and Intelligence + surveillance + reconnaissance (ISR) systems <br/><br/>
+            •	Working together with multiple small teams to design a system that integrates an automated and manual radar data-testing simulator as well as collaborating with multiple teams to strategically remove previously implemented features in specific radar modes by analyzing the existing infrastructure. <br/>
+            •		Implementing tests that are driven by a continuous integration environment (Jenkins) and Python scripts. <br/>
+            </div>
+
+
+            <Table striped bordered condensed hover responsive className="worldpanel">
+              <tr>
+                <td><b>Tools</b></td>
+                <td>Visual Studio, AdaMulti, SlickEdit, Notepad++, TortoiseSVN, Git/SVN, PuTTY</td>
+              </tr>
+              <tr>
+                <td><b>Environment</b></td>
+                <td>C, C++, Python, JSON, XML, C#/.NET, Linux, Windows 7</td>
+              </tr>
+            </Table>
+
+          </Panel>
           <Panel collapsible expanded={world14} bsStyle={worldsty14} header="World 1-4 (May 2016 - June 2017) : Mercury Security Corporation LLC - Firmware Engineer"  eventKey="4" onSelect={()=>this.setState({overworldsel: "1-4"})}>
             <div className="worldpanel">
               Mercury Security Corporation is a leader on developing and manufacturing OEM hardware for facility security and access control. They collaborate with OEM partners to build an unmatched set of features into an open hardware platform that is unequaled for reliability, longevity, and effectiveness. <br/><br/>

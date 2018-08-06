@@ -39,7 +39,7 @@ class TechnicalSkills extends Component {
             <tbody>
               <tr>
                 <td>Languages</td>
-                <td>C, C++, C#/.NET, Java, PHP</td>
+                <td>C, C++, Python, C#/.NET, Java, PHP</td>
               </tr>
               <tr>
                 <td>Web Technologies</td>
@@ -55,7 +55,7 @@ class TechnicalSkills extends Component {
               </tr>
               <tr>
                 <td>Tools</td>
-                <td>Eclipse, Notepad++, Visual Studios, Jira, PuTTY, WinSCP, VMWare, VirtualBox, VPL, BugTracker.NET, Jenkins, Rake</td>
+                <td>Eclipse, Notepad++, Visual Studios, SlickEdit, AdaMulti, Jenkins, Jira, PuTTY, WinSCP, VMWare, VirtualBox, VPL, BugTracker.NET, Jenkins, Rake</td>
               </tr>
               <tr>
                 <td>Methodologies/Software</td>
@@ -74,12 +74,6 @@ class TechnicalSkills extends Component {
             <td>
               <form method="get" name="downloadform" action={this.state.outresume}>
                 <Button bsStyle="primary" bsSize="large" type="submit" onClick={(i)=>this.onPressButton(1)}>Download Resume</Button>
-                <Button bsStyle="primary" bsSize="large" type="submit" onClick={(i)=>this.onPressButton(2)}>Download Technical Resume</Button>
-              </form>
-            </td>
-            <td>
-              <form method="get" >
-
               </form>
             </td>
           </tr>

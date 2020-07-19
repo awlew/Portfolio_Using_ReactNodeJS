@@ -79,7 +79,7 @@ class ModelGallery extends Component {
   }
 
   calculateWidth(){
-if (window.innerWidth >= 540){
+    if (window.innerWidth >= 540){
       return 540;
     } else {
       return 320;

@@ -59,8 +59,8 @@ onPanelClick(e, evKey){
           <Panel collapsible expanded={world15} bsStyle={worldsty15} header="World 1-5 (December 2017 - Present) : Raytheon Space and Airborne Systems - Software Engineer"  eventKey="5" onSelect={()=>this.setState({overworldsel: "1-5"})}>
             <div className="worldpanel">
               Raytheon Space and Airborne Systems is a major component of Raytheon that focuses on developing airborne radars and processors, Electro-optic/infrared sensors, Electronic warfare and precision guidance systems, Active electronically scanned array radars, Space and missile defense technology, and Intelligence + surveillance + reconnaissance (ISR) systems <br/><br/>
-            •	Working together with multiple small teams to design a system that integrates an automated and manual radar data-testing simulator as well as collaborating with multiple teams to strategically remove previously implemented features in specific radar modes by analyzing the existing infrastructure. <br/>
-            •		Implementing tests that are driven by a continuous integration environment (Jenkins) and Python scripts. <br/>
+            •	 Working together with multiple small teams to design + develop, integrate, test, document, maintain, troubleshoot + edebug, and peer review software using Ada, Python, and C/C++. <br/>
+            •	 (I am very limited to the information that I can put here.) <br/>
             </div>
 
 

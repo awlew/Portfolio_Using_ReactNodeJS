@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import FacebookProvider, { Share, EmbeddedPost } from 'react-facebook';
 import {Button} from 'react-bootstrap';
-
+import InstagramEmbed from 'react-instagram-embed';
 
 //image paths
 /*import minotaur from '../thumbnails/minotaur.jpg';
 import bugbears from '../thumbnails/bugbears.jpg';
 import femcommissar from '../thumbnails/femcommissar.jpg';*/
 
-const MAX_IMGES = 10;
+const MAX_IMGES = 15;
+const FBAppID = "1911577932496741";
 
 class ModelGallery extends Component {
   constructor() {
@@ -16,7 +17,7 @@ class ModelGallery extends Component {
     this.state={
       showmodal: false,
       renderedGallery: '',
-      currentSelect: 9,
+      currentSelect: 14,
     };
   }
 
@@ -24,8 +25,62 @@ class ModelGallery extends Component {
     this.setState({renderedGallery: rP});
   }
 
+  RendInstaEmb(iurl){
+    const maxWIEmb = 500;
+    return (
+      <center>
+        <InstagramEmbed
+          url={iurl}
+          maxWidth={maxWIEmb}
+          hideCaption={false}
+          containerTagName='EmbeddedPost'
+          protocol=''
+          injectScript
+          onLoading={() => {}}
+          onSuccess={() => {}}
+          onAfterRender={() => {}}
+          onFailure={() => {}}
+        />
+      </center>
+    );
+  }
+
+  RendFBEmb(iurl, iwidth){
+    return (
+      <div>
+        <FacebookProvider appId={this.FBAppID}>
+          <EmbeddedPost href={iurl} width={iwidth} />
+        </FacebookProvider>
+      </div>
+    );
+  }
+
   arrPNL(){
     switch(this.state.currentSelect) {
+      case 14: //Kill team Goon Squad
+        return(
+          this.RendInstaEmb('https://www.instagram.com/p/CAJqHK0nHsX/?utm_source=ig_web_copy_link')
+        );
+      case 13: //Kill team Goon Squad
+        return(
+          this.RendInstaEmb('https://www.instagram.com/p/B_9mLbGnoZW/?utm_source=ig_web_copy_link')
+        );
+        break;
+      case 12: //Kill team Reiver Bros
+        return(
+          this.RendInstaEmb('https://www.instagram.com/p/B_6Xi4HnLqT/?utm_source=ig_web_copy_link')
+        );
+        break;
+      case 11: //Kill team Interceptor 1
+          return (
+            this.RendInstaEmb('https://www.instagram.com/p/B_GuBIxH5PX/?utm_source=ig_web_copy_link')
+          );
+          break;
+      case 10: //Kill team Scouts
+          return (
+            this.RendInstaEmb('https://www.instagram.com/p/B-jjraQnHAm/?utm_source=ig_web_copy_link')
+          );
+          break;
       case 9: //NMM Stormcast Eternal
           return (
             <FacebookProvider appId="1911577932496741">
@@ -119,7 +174,7 @@ class ModelGallery extends Component {
   }
 
   calculateWidth(){
-if (window.innerWidth >= 540){
+    if (window.innerWidth >= 540){
       return 540;
     } else {
       return 320;

@@ -39,7 +39,7 @@ class TechnicalSkills extends Component {
             <tbody>
               <tr>
                 <td>Languages</td>
-                <td>C, C++, Python, C#/.NET, Java, PHP</td>
+                <td>Ada, C, C++, Python, C#/.NET, Java, PHP</td>
               </tr>
               <tr>
                 <td>Web Technologies</td>

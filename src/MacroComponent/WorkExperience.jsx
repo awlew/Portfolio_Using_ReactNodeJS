@@ -71,7 +71,7 @@ onPanelClick(e, evKey){
               </tr>
               <tr>
                 <td><b>Environment</b></td>
-                <td>C, C++, Python, JSON, XML, C#/.NET, Linux, Windows 7</td>
+                <td>Ada, C, C++, Python, JSON, XML, C#/.NET, Linux, Windows 7</td>
               </tr>
             </Table>
 
